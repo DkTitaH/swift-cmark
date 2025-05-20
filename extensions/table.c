@@ -270,7 +270,7 @@ static table_row *row_from_string(cmark_syntax_extension *self,
   //
   // > Each row consists of cells containing arbitrary text, in which inlines
   // > are parsed, separated by pipes (|). A leading and trailing pipe is also
-  // > recommended for clarity of reading, and if there’s otherwise parsing
+  // > recommended for clarity of reading, and if there's otherwise parsing
   // > ambiguity.
 
   table_row *row = NULL;
@@ -700,6 +700,7 @@ static int can_contain(cmark_syntax_extension *extension, cmark_node *node,
            child_type == CMARK_NODE_EMPH || child_type == CMARK_NODE_STRONG ||
            child_type == CMARK_NODE_LINK || child_type == CMARK_NODE_IMAGE || child_type == CMARK_NODE_ATTRIBUTE ||
            child_type == CMARK_NODE_STRIKETHROUGH ||
+           child_type == CMARK_NODE_UNDERLINE ||
            child_type == CMARK_NODE_HTML_INLINE ||
            child_type == CMARK_NODE_FOOTNOTE_REFERENCE;
   }

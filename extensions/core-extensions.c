@@ -16,6 +16,7 @@ static int core_extensions_registration(cmark_plugin *plugin) {
   cmark_plugin_register_syntax_extension(plugin, create_autolink_extension());
   cmark_plugin_register_syntax_extension(plugin, create_tagfilter_extension());
   cmark_plugin_register_syntax_extension(plugin, create_tasklist_extension());
+  cmark_plugin_register_syntax_extension(plugin, create_underline_extension());
   return 1;
 }
 
