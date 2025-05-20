@@ -7,7 +7,8 @@ add_library(libcmark-gfm-extensions
   strikethrough.c
   table.c
   tagfilter.c
-  tasklist.c)
+  tasklist.c
+  underline.c)
 target_compile_definitions(libcmark-gfm-extensions PUBLIC
   $<$<NOT:$<BOOL:${BUILD_SHARED_LIBS}>>:CMARK_GFM_STATIC_DEFINE>)
 target_include_directories(libcmark-gfm-extensions PUBLIC
